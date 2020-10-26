@@ -1,0 +1,76 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\91874\AppData\Local\Microsoft\WindowsApps;;C:\Users\91874\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\91874\AppData\Roaming\npm;C:\Users\91874\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.18.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\91874\Documents\upload-compressed-image-s3\upload-compressed-image-to-s3\package.json: Unexpected token } in JSON at position 1507
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "react-starter-kit",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "build": "concurrently \"rm -rf dist\" \"NODE_ENV=production webpack --config webpack-client.config.js\" \"webpack --mode production --config webpack-server.config.js\"",
+      "buildDev": "concurrently \"rm -rf dist\" \"webpack --mode development --config webpack-client.config.js --watch\" \"webpack --mode development --config webpack-server.config.js --watch\"",
+      "start": "node ./dist/server.js",
+      "startDev": "nodemon --inspect=7000 ./dist/server.js",
+      "startClient": "webpack-dev-server --mode development --config webpack-client.config.js --open"
+    },
+    "dependencies": {
+      "@babel/polyfill": "^7.4.4",
+      "@babel/preset-react": "^7.0.0",
+      "@welldone-software/why-did-you-render": "^4.2.6",
+      "babel-loader": "^8.1.0",
+      "case-sensitive-paths-webpack-plugin": "^2.3.0",
+      "classnames": "^2.2.6",
+      "compression-webpack-plugin": "^5.0.1",
+      "concurrently": "^5.3.0",
+      "connect-history-api-fallback": "^1.6.0",
+      "css-loader": "^3.5.3",
+      "duplicate-package-checker-webpack-plugin": "^3.0.0",
+      "express": "^4.17.1",
+      "express-static-gzip": "^2.0.7",
+      "file-loader": "^6.0.0",
+      "html-webpack-plugin": "^4.3.0",
+      "lodash": "^4.17.19",
+      "mini-css-extract-plugin": "^0.9.0",
+      "node-fetch": "^2.6.0",
+      "node-sass": "^4.14.1",
+      "nodemon": "^2.0.4",
+      "path": "^0.12.7",
+      "querystring": "^0.2.0",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+    },
+    "devDependencies": {
+      "@babel/core": "^7.4.5",
+      "@babel/preset-env": "^7.8.3",
+      "webpack": "^4.41.5",
+      "webpack-cli": "^3.3.10",
+      "webpack-dev-server": "^3.10.1",
+      "webpack-node-externals": "^2.5.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

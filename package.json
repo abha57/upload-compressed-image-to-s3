@@ -1,0 +1,52 @@
+{
+  "name": "react-starter-kit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "concurrently \"rm -rf dist\" \"NODE_ENV=production webpack --config webpack-client.config.js\" \"webpack --mode production --config webpack-server.config.js\"",
+    "buildDev": "concurrently \"rm -rf dist\" \"webpack --mode development --config webpack-client.config.js --watch\" \"webpack --mode development --config webpack-server.config.js --watch\"",
+    "start": "node ./dist/server.js",
+    "startDev": "nodemon --inspect=7000 ./dist/server.js",
+    "startClient": "webpack-dev-server --mode development --config webpack-client.config.js --open"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@welldone-software/why-did-you-render": "^4.2.6",
+    "axios": "^0.21.0",
+    "babel-loader": "^8.1.0",
+    "body-parser": "^1.19.0",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
+    "classnames": "^2.2.6",
+    "compression-webpack-plugin": "^5.0.1",
+    "concurrently": "^5.3.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "css-loader": "^3.5.3",
+    "dotenv": "^8.2.0",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "express": "^4.17.1",
+    "express-static-gzip": "^2.1.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "lodash": "^4.17.19",
+    "mini-css-extract-plugin": "^0.9.0",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.1",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.8.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-node-externals": "^2.5.1"
+  }
+}
