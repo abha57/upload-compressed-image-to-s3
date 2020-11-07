@@ -9,6 +9,7 @@ const UploadImage = (props) => {
         const { canvas: cv, srcEncoded } = await fileReader(file);
         const container = document.getElementById('canvas');
         container.appendChild(cv);
+        console.log('srcEncoded', srcEncoded);
         const response = await uploadImage(file);
     }
     return (

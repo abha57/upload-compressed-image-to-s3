@@ -12,6 +12,7 @@ export const fileReader = (file) => {
             try {
             const imageEle = document.createElement('img');
             imageEle.src = event.target.result;
+            // console.log('filereader url', event.target.result);
             imageEle.onload = function(e) {
                 canvas = document.createElement('canvas');
                 canvas.width = defaults.MAX_WIDTH;
@@ -19,7 +20,8 @@ export const fileReader = (file) => {
                 canvas.height = e.target.height * scale;
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(e.target, 0, 0, canvas.width, canvas.height);
-                const srcEncoded = ctx.canvas.toDataURL(e.target, "image/jpeg", 0.1);
+                // srcEncoded = ctx.canvas.toDataURL(e.target, "image/jpeg", 0.1);
+                srcEncoded =  event.target.result;
                 res({
                     canvas,
                     srcEncoded
